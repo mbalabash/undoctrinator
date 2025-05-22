@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Undoctrinator Settings: the built-in biases and propagated values ​​behind the texts you read
+    </title>
+    <link rel="stylesheet" href="./settings.css" />
+  </head>
+
+  <body>
+    <div class="setting-row">
+      <h3>Which model to use:</h3>
+
+      <div class="radio-item">
+        <input type="radio" id="modelWebLLM_QWEN" name="modelToUse" value="WEBLLM_QWEN" />
+        <label for="modelWebLLM_QWEN">Local Qwen-2.5 1.5B</label>
+      </div>
+
+      <div class="radio-item">
+        <input type="radio" id="modelWebLLM_LLAMA" name="modelToUse" value="WEBLLM_LLAMA" />
+        <label for="modelWebLLM_LLAMA">Local Llama-3.2 3B</label>
+      </div>
+
+      <div class="radio-item">
+        <input type="radio" id="modelWebLLM_MISTRAL" name="modelToUse" value="WEBLLM_MISTRAL" />
+        <label for="modelWebLLM_MISTRAL">Local Mistral 7B</label>
+      </div>
+
+      <div class="radio-item">
+        <input
+          type="radio"
+          id="modelWebLLM_DEEPSEEK_LLAMA"
+          name="modelToUse"
+          value="WEBLLM_DEEPSEEK_LLAMA"
+        />
+        <label for="modelWebLLM_DEEPSEEK_LLAMA">Local DeepSeek R1 (Distill Llama 8B)</label>
+      </div>
+
+      <div class="radio-item">
+        <input type="radio" id="modelOpenAI" name="modelToUse" value="OPENAI" />
+        <label for="modelOpenAI">OpenAI (4o-mini)</label>
+      </div>
+
+      <div class="radio-item">
+        <input type="radio" id="modelAnthropic" name="modelToUse" value="ANTHROPIC" />
+        <label for="modelAnthropic">Anthropic (claude-3-opus)</label>
+      </div>
+    </div>
+
+    <div class="setting-row">
+      <label for="openAiApiKeyInput">OpenAI API Key</label>
+      <input type="text" id="openAiApiKeyInput" />
+    </div>
+
+    <div class="setting-row">
+      <label for="anthropicApiKeyInput">Anthropic API Key</label>
+      <input type="text" id="anthropicApiKeyInput" />
+    </div>
+
+    <script type="module" src="../../../dist/settings.js"></script>
+  </body>
+</html>

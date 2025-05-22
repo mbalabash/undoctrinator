@@ -1,0 +1,72 @@
+{
+  "name": "undoctrinator",
+  "description": "Analyzes text on web pages or images to uncover ideological markers, promoted values, emotional manipulations, and logical fallacies behind the texts you read",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "test": "jest --silent",
+    "build": "vite build --mode production",
+    "build:watch": "vite build --watch --mode development",
+    "pack": "npm run build && zip -r undoctrinator.zip dist manifest.json"
+  },
+  "dependencies": {
+    "@mlc-ai/web-llm": "0.2.79",
+    "@mozilla/readability": "0.6.0",
+    "dompurify": "3.2.6",
+    "progressbar.js": "1.1.1",
+    "tesseract.js": "6.0.1"
+  },
+  "devDependencies": {
+    "@types/chrome": "0.0.323",
+    "@types/jest": "29.5.14",
+    "@types/jsdom": "21.1.7",
+    "@types/node": "22.15.21",
+    "@types/progressbar.js": "1.1.7",
+    "jest": "29.7.0",
+    "jsdom": "26.1.0",
+    "prettier": "3.5.3",
+    "ts-jest": "29.3.4",
+    "typescript": "5.8.3",
+    "vite": "6.3.5"
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "quoteProps": "as-needed",
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "none"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "testRegex": ".*\\.spec\\.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "**/*.(t|j)s"
+    ],
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mbalabash/undoctrinator"
+  },
+  "homepage": "https://github.com/mbalabash/undoctrinator#readme",
+  "bugs": {
+    "url": "https://github.com/mbalabash/undoctrinator/issues"
+  },
+  "license": "MIT",
+  "publisher": "mbalabash",
+  "author": "mbalabash <maksim.balabash@gmail.com>",
+  "keywords": [
+    "ai",
+    "chrome",
+    "browser-extension"
+  ]
+}

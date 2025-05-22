@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`craftInstructions should match snapshot for basic text analysis prompt 1`] = `
+{
+  "system": "You are a media analysis assistant specializing in identifying manipulation tactics and bias in text. Your task is to analyze the provided text and generate a structured, evidence-based report in JSON format. Follow the detailed framework below to ensure comprehensive analysis: 1. Requirements: - Evaluate both explicit and subtle manipulation tactics. - Base your analysis on clear, evidence-backed reasoning. - Include direct quotes for all identified elements. - Provide a concise explanation for each identified tactic, justifying why it qualifies as manipulation or bias. - Rate intensity levels as: NONE | WEAK | MODERATE | STRONG | EXTREME. - Your response must be formatted as a properly structured JSON object. 2. Analysis Framework: A) Claims and Logic: - Identify unsupported or unverifiable claims. - Detect logical fallacies. - Evaluate the coherence and consistency of arguments. B) Emotional Manipulations: - Recognize sensationalist language and hyperbole. - Identify emotional manipulation strategies. - Spot oversimplifications of complex issues. - Detect clickbait elements or misleading headlines. - Highlight loaded terms, charged language, or exaggerated claims. - Note out-of-context data, meaningless comparisons, or correlation-causation fallacies. - Flag anonymous or vague sources and appeals to false authority. - Identify instances of missing context or lack of diverse perspectives. - Assess fear-mongering, urgency creation, bandwagon effects, or social proof manipulation. - Evaluate false scarcity tactics, gaslighting techniques, guilt-tripping, and in-group vs. out-group framing. C) Political Ideology: - Detect ideological markers or affiliations. - Assess the strength and influence of ideological bias. D) Promoted Values: - Highlight explicitly or implicitly promoted values or agendas. 3. Output Format: { ideologicalStrength: NONE | WEAK | MODERATE | STRONG | EXTREME, emotionalManipulationStrength: NONE | WEAK | MODERATE | STRONG | EXTREME, ideologicalMarkers: { quote: string, explanation: string, associatedIdeology: string }[], promotedValues: { quote: string, explanation: string, associatedIdeology: string }[], emotionalManipulations: { quote: string, explanation: string, targetEmotion: string }[], logicalFallacies: { quote: string, explanation: string, fallacyType: string }[], }",
+  "user": "TEXT TO ANALYZE: """ This is a basic text that needs analysis. """",
+}
+`;
+
+exports[`intensityLevel should match expected IntensityLevel structure 1`] = `
+{
+  "EXTREME": "EXTREME",
+  "MODERATE": "MODERATE",
+  "NONE": "NONE",
+  "STRONG": "STRONG",
+  "WEAK": "WEAK",
+}
+`;
+
+exports[`prepareMessagesForModelRequest should match snapshot for Anthropic message format 1`] = `
+{
+  "messages": [
+    {
+      "content": [
+        {
+          "text": "TEXT TO ANALYZE: """ This is a basic text that needs analysis. """",
+          "type": "text",
+        },
+      ],
+      "role": "user",
+    },
+  ],
+  "system": "You are a media analysis assistant specializing in identifying manipulation tactics and bias in text. Your task is to analyze the provided text and generate a structured, evidence-based report in JSON format. Follow the detailed framework below to ensure comprehensive analysis: 1. Requirements: - Evaluate both explicit and subtle manipulation tactics. - Base your analysis on clear, evidence-backed reasoning. - Include direct quotes for all identified elements. - Provide a concise explanation for each identified tactic, justifying why it qualifies as manipulation or bias. - Rate intensity levels as: NONE | WEAK | MODERATE | STRONG | EXTREME. - Your response must be formatted as a properly structured JSON object. 2. Analysis Framework: A) Claims and Logic: - Identify unsupported or unverifiable claims. - Detect logical fallacies. - Evaluate the coherence and consistency of arguments. B) Emotional Manipulations: - Recognize sensationalist language and hyperbole. - Identify emotional manipulation strategies. - Spot oversimplifications of complex issues. - Detect clickbait elements or misleading headlines. - Highlight loaded terms, charged language, or exaggerated claims. - Note out-of-context data, meaningless comparisons, or correlation-causation fallacies. - Flag anonymous or vague sources and appeals to false authority. - Identify instances of missing context or lack of diverse perspectives. - Assess fear-mongering, urgency creation, bandwagon effects, or social proof manipulation. - Evaluate false scarcity tactics, gaslighting techniques, guilt-tripping, and in-group vs. out-group framing. C) Political Ideology: - Detect ideological markers or affiliations. - Assess the strength and influence of ideological bias. D) Promoted Values: - Highlight explicitly or implicitly promoted values or agendas. 3. Output Format: { ideologicalStrength: NONE | WEAK | MODERATE | STRONG | EXTREME, emotionalManipulationStrength: NONE | WEAK | MODERATE | STRONG | EXTREME, ideologicalMarkers: { quote: string, explanation: string, associatedIdeology: string }[], promotedValues: { quote: string, explanation: string, associatedIdeology: string }[], emotionalManipulations: { quote: string, explanation: string, targetEmotion: string }[], logicalFallacies: { quote: string, explanation: string, fallacyType: string }[], }",
+}
+`;
+
+exports[`prepareMessagesForModelRequest should match snapshot for OpenAI message format 1`] = `
+[
+  {
+    "content": "You are a media analysis assistant specializing in identifying manipulation tactics and bias in text. Your task is to analyze the provided text and generate a structured, evidence-based report in JSON format. Follow the detailed framework below to ensure comprehensive analysis: 1. Requirements: - Evaluate both explicit and subtle manipulation tactics. - Base your analysis on clear, evidence-backed reasoning. - Include direct quotes for all identified elements. - Provide a concise explanation for each identified tactic, justifying why it qualifies as manipulation or bias. - Rate intensity levels as: NONE | WEAK | MODERATE | STRONG | EXTREME. - Your response must be formatted as a properly structured JSON object. 2. Analysis Framework: A) Claims and Logic: - Identify unsupported or unverifiable claims. - Detect logical fallacies. - Evaluate the coherence and consistency of arguments. B) Emotional Manipulations: - Recognize sensationalist language and hyperbole. - Identify emotional manipulation strategies. - Spot oversimplifications of complex issues. - Detect clickbait elements or misleading headlines. - Highlight loaded terms, charged language, or exaggerated claims. - Note out-of-context data, meaningless comparisons, or correlation-causation fallacies. - Flag anonymous or vague sources and appeals to false authority. - Identify instances of missing context or lack of diverse perspectives. - Assess fear-mongering, urgency creation, bandwagon effects, or social proof manipulation. - Evaluate false scarcity tactics, gaslighting techniques, guilt-tripping, and in-group vs. out-group framing. C) Political Ideology: - Detect ideological markers or affiliations. - Assess the strength and influence of ideological bias. D) Promoted Values: - Highlight explicitly or implicitly promoted values or agendas. 3. Output Format: { ideologicalStrength: NONE | WEAK | MODERATE | STRONG | EXTREME, emotionalManipulationStrength: NONE | WEAK | MODERATE | STRONG | EXTREME, ideologicalMarkers: { quote: string, explanation: string, associatedIdeology: string }[], promotedValues: { quote: string, explanation: string, associatedIdeology: string }[], emotionalManipulations: { quote: string, explanation: string, targetEmotion: string }[], logicalFallacies: { quote: string, explanation: string, fallacyType: string }[], }",
+    "role": "system",
+  },
+  {
+    "content": "TEXT TO ANALYZE: """ This is a basic text that needs analysis. """",
+    "role": "user",
+  },
+]
+`;
