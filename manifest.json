@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Undoctrinator",
   "version": "1.0.0",
-  "description": "Analyzes text on web pages or images to uncover ideological markers, promoted values, emotional manipulations, and logical fallacies behind the texts you read",
+  "description": "Analyzes text on web pages or images to uncover ideological markers, promoted values, emotional manipulations, and logical fallacies",
   "icons": {
     "16": "dist/assets/logo/icon16.png",
     "32": "dist/assets/logo/icon32.png",

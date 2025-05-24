@@ -1,6 +1,6 @@
 {
   "name": "undoctrinator",
-  "description": "Analyzes text on web pages or images to uncover ideological markers, promoted values, emotional manipulations, and logical fallacies behind the texts you read",
+  "description": "Analyzes text on web pages or images to uncover ideological markers, promoted values, emotional manipulations, and logical fallacies",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
