@@ -9,7 +9,7 @@
     "48": "dist/assets/logo/icon48.png",
     "128": "dist/assets/logo/icon128.png"
   },
-  "permissions": ["tabs", "activeTab", "storage", "scripting", "contextMenus"],
+  "permissions": ["activeTab", "storage", "scripting", "contextMenus"],
   "host_permissions": ["<all_urls>"],
   "content_security_policy": {
     "connect-src": ["'self'", "https://api.anthropic.com", "https://api.openai.com"],
