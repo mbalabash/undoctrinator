@@ -25,7 +25,7 @@ Undoctrinator is a **proof-of-concept** Chrome Extension that runs machine learn
 
 ### Via Chrome Web Store
 
-1. Visit the [Undoctrinator extension page]() in the Chrome Web Store
+1. Visit the [Undoctrinator extension page](https://chromewebstore.google.com/detail/pkkgcjjkfhfofepfalighcoangefjcob?utm_source=item-share-cb) in the Chrome Web Store
 2. Click "Add to Chrome"
 3. Review and accept any permission requests
 4. Pin the extension to your toolbar for quick access
